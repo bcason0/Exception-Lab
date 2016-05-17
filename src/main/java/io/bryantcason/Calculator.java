@@ -30,4 +30,12 @@ public class Calculator {
         }
         return answer;
     }
+
+    public static double squareRoot(double value1) throws ComplexNumberException{
+        answer = Math.sqrt(value1);
+        if(value1 < 0){
+            throw new ComplexNumberException();
+        }
+        return answer;
+    }
 }

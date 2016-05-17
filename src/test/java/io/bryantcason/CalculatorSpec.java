@@ -37,10 +37,22 @@ public class CalculatorSpec {
     }
 
     @Test(expected = DividedByZeroException.class)
-    public void dividedByZero(){
+    public void dividedByZeroTest(){
         double actualValue = divide(1,0);
         assertEquals("Error should be thrown", true, actualValue);
     }
 
+    @Test
+    public void squareRootTest(){
+        double expectedValue = 2;
+        double actualValue = squareRoot(4);
+        assertEquals("2 should be actual value", expectedValue, actualValue, .1);
+    }
+
+    @Test(expected = ComplexNumberException.class)
+    public void complexNumberTest(){
+        double actualValue = squareRoot(-1);
+        assertEquals("Error should be thrown", true, actualValue);
+    }
 
     }
