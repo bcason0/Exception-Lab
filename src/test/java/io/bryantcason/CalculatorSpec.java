@@ -3,6 +3,7 @@ package io.bryantcason;
 import static io.bryantcason.Calculator.*;
 import static org.junit.Assert.*;
 
+import com.sun.tools.corba.se.idl.constExpr.Divide;
 import org.junit.Test;
 
 public class CalculatorSpec {
@@ -35,7 +36,7 @@ public class CalculatorSpec {
         assertEquals("9 should be the actual value", expectedValue, actualValue, .01);
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = DividedByZeroException.class)
     public void dividedByZero(){
         double actualValue = divide(1,0);
         assertEquals("Error should be thrown", true, actualValue);

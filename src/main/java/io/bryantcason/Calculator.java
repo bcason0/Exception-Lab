@@ -1,5 +1,7 @@
 package io.bryantcason;
 
+import com.sun.tools.corba.se.idl.constExpr.Divide;
+
 /**
  * Created by bryantcason on 5/17/16.
  */
@@ -21,10 +23,10 @@ public class Calculator {
         return answer;
     }
 
-    public static double divide(double value1, double value2) throws ArithmeticException{
+    public static double divide(double value1, double value2) throws DividedByZeroException{
         answer = value1/value2;
         if (value2 == 0) {
-            throw new ArithmeticException();
+            throw new DividedByZeroException();
         }
         return answer;
     }
