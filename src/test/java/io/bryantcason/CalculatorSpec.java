@@ -3,7 +3,7 @@ package io.bryantcason;
 import static io.bryantcason.Calculator.*;
 import static org.junit.Assert.*;
 
-import com.sun.tools.corba.se.idl.constExpr.Divide;
+
 import org.junit.Test;
 
 public class CalculatorSpec {
@@ -42,6 +42,7 @@ public class CalculatorSpec {
         assertEquals("Error should be thrown", true, actualValue);
     }
 
+
     @Test
     public void squareRootTest(){
         double expectedValue = 2;
@@ -55,4 +56,4 @@ public class CalculatorSpec {
         assertEquals("Error should be thrown", true, actualValue);
     }
 
-    }
+}
